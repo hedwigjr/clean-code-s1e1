@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
   <head>
     <title>Todo App</title>
     <link rel="stylesheet" 
@@ -10,54 +11,55 @@
   </head>
   <body>
     <header class="header">
-      <img class="img-contain-in-header" src="./eisenhower-matrix.jpg" alt="header image">
-      <a class="more-inf" 
+      <img class="header__image" src="./eisenhower-matrix.jpg" alt="header image">
+      <a class="header__link" 
          href="https://goal-life.com/page/method/matrix-eisenhower">
       Want more details?
       </a>
     </header>
-    <main class="centered-main-page-element">
-      <section class="top-section-for-adding-element-to-list">
-        <h3>Add Item</h3>
-        <div class="task-row-wrapper">
-          <input class="new-task task" 
+    <main class="main">
+      <section class="main__add add-section">
+        <h3 class="main__title add-section__title">Add Item</h3>
+        <div class="add-section__button-wrapper">
+          <input class="main__input main__input_add" 
                  type="text">
-          <button>Add</button>
+          <button class="main__button">Add</button>
         </div>
       </section>
-      <section class="incomplete-tasks">
-        <h3>Todo</h3>
-        <div>
-            <input type="checkbox">
-            <label class="task">Pay Bills</label>
-            <input type="text" class="task">
-            <button class="edit">Edit</button>
-            <button class="delete">
-              <img class="img-contain-in-button-delete" src="./remove.svg" alt="delete image">
+      <section class="main__incomplete-tasks todo">
+        <h3 class="main__title">Todo</h3>
+        <div class="todo__wrapper">
+            <input class="main__checkbox" type="checkbox">
+            <span class="main__task">Pay Bills</span>
+            <input type="text" 
+                   class="main__input main__input_edit">
+            <button class="main__button main__button_edit">Edit</button>
+            <button class="main__button main__button_delete button-delete">
+              <img class="button-delete__image" src="./remove.svg" alt="delete image">
             </button>
         </div>
-        <div class="edit-mode">
-            <input type="checkbox">
-            <label class="task">Go Shopping</label>
+        <div class="todo__wrapper edit-mode">
+            <input class="main__checkbox" type="checkbox">
+            <span class="main__task main__input_edit-mode">Go Shopping</span>
             <input type="text" 
                    value="Go Shopping" 
-                   class="task">
-            <button class="edit">Save</button>
-            <button class="delete">
-              <img src="./remove.svg" alt="delete image">
+                   class="main__input">
+            <button class="main__button main__button_save">Save</button>
+            <button class="main__button main__button_delete button-delete">
+              <img class="button-delete__image" src="./remove.svg" alt="delete image">
             </button>
         </div>
       </section>
       <section class="completed-tasks">
-        <h3>Completed</h3>
-        <div>
-            <input type="checkbox" checked>
-            <span class="task">See the Doctor</span>
+        <h3 class="main__title">Completed</h3>
+        <div class="completed-tasks__wrapper">
+            <input class="main__checkbox" type="checkbox" checked>
+            <span class="main__task">See the Doctor</span>
             <input type="text" 
-                   class="task">
-            <button class="edit">Edit</button>
-            <button class="delete">
-              <img src="./remove.svg" alt="delete image">
+                   class="main__input main__input_edit">
+            <button class="main__button main__button_edit">Edit</button>
+            <button class="main__button main__button_delete button-delete">
+              <img class="button-delete__image" src="./remove.svg" alt="delete image">
             </button>
         </div>
       </section>
@@ -65,3 +67,4 @@
     <script src="app.js"></script>
   </body>
 </html>
+  
